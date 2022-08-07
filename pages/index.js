@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Hero from "../components/hero";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
         <meta name="description" content="Shafrazi's portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Hero />
     </div>
   );
 }
