@@ -3,6 +3,7 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 
 const navigation = [
+  { name: "Home", href: "/", current: false },
   { name: "About", href: "/about", current: false },
   { name: "Projects", href: "/projects", current: false },
   { name: "Work", href: "/work", current: false },
@@ -28,7 +29,7 @@ export default function NavBar() {
     <Disclosure as="nav" className="bg-white shadow-lg">
       {({ open }) => (
         <>
-          <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+          <div className="max-w-[100rem] mx-auto px-2 sm:px-6 lg:px-8">
             <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
@@ -55,35 +56,37 @@ export default function NavBar() {
                     alt="logo"
                   />
                 </div>
-                <div className="hidden sm:block sm:ml-6 py-1">
-                  <div className="flex space-x-10">
-                    {pages.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current
-                            ? "bg-gray-300 text-gray-700 font-bold"
-                            : "text-black hover:bg-gray-700 hover:text-white font-bold",
-                          "px-3 py-2 rounded-md font-medium text-lg"
-                        )}
-                        aria-current={item.current ? "page" : undefined}
-                        onClick={() => {
-                          setpages((prevPages) => {
-                            return prevPages.map((page) => {
-                              if (item.name === page.name) {
-                                page.current = true;
-                              } else {
-                                page.current = false;
-                              }
-                              return page;
+                <div className="flex justify-end md:w-full">
+                  <div className="hidden sm:block sm:ml-6 py-1">
+                    <div className="flex space-x-10">
+                      {pages.map((item) => (
+                        <a
+                          key={item.name}
+                          href={item.href}
+                          className={classNames(
+                            item.current
+                              ? "bg-gray-300 text-gray-700 font-bold"
+                              : "text-black hover:bg-gray-700 hover:text-white font-bold",
+                            "px-3 py-2 rounded-md font-bold text-lg"
+                          )}
+                          aria-current={item.current ? "page" : undefined}
+                          onClick={() => {
+                            setpages((prevPages) => {
+                              return prevPages.map((page) => {
+                                if (item.name === page.name) {
+                                  page.current = true;
+                                } else {
+                                  page.current = false;
+                                }
+                                return page;
+                              });
                             });
-                          });
-                        }}
-                      >
-                        {item.name}
-                      </a>
-                    ))}
+                          }}
+                        >
+                          {item.name}
+                        </a>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
