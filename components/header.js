@@ -103,8 +103,8 @@ export default function NavBar() {
                   className={classNames(
                     item.current
                       ? "bg-gray-300 text-gray-700 font-bold"
-                      : "text-gray-700 hover:bg-gray-700 hover:text-white font-bold",
-                    "block px-3 py-2 rounded-md text-base font-medium"
+                      : "text-black hover:bg-gray-700 hover:text-white font-bold",
+                    "block px-3 py-2 rounded-md text-base font-bold"
                   )}
                   aria-current={item.current ? "page" : undefined}
                   onClick={() => {
