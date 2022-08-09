@@ -25,7 +25,7 @@ export default function Hero() {
               </button>
             </a>
             <Link href="mailto:shafrazi@live.com">
-              <button className="bg-white text-black  hover:bg-gray-300  hover:border-0 border border-black rounded px-4 md:px-6 py-2 font-extrabold text-lg md:text-xl">
+              <button className="bg-white text-black  hover:bg-gray-300 hover:border-gray-300 border border-black rounded px-4 md:px-6 py-2 font-extrabold text-lg md:text-xl">
                 Say Hello!
               </button>
             </Link>

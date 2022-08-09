@@ -4,11 +4,11 @@ import Footer from "../components/footer";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <div className="">
       <Header />
       <Component {...pageProps} />
       <Footer />
-    </>
+    </div>
   );
 }
 
