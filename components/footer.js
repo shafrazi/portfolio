@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="max-w-[100rem] mx-auto px-2 py-6 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center md:justify-between">
+    <footer className="max-w-[100rem] w-full mx-auto px-2 py-6 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center md:justify-between">
       <div className="flex space-x-5">
         <Link href="https://github.com/shafrazi">
           <a target="_blank" rel="noopener noreferrer">
