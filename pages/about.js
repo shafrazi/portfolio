@@ -5,6 +5,31 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import PageHeader from "../components/page-header";
 
+const skills = [
+  "Javascript",
+  "Ruby",
+  "React",
+  "Ruby on Rails",
+  "NextJS",
+  "TailwindCSS",
+  "Postgresql",
+  "PrismaDB",
+];
+
+function Skill({ skill }) {
+  return (
+    <li className="flex">
+      <FontAwesomeIcon
+        icon={faCaretRight}
+        className="mr-3"
+        width="16"
+        height="16"
+      />
+      <span>{skill}</span>
+    </li>
+  );
+}
+
 export default function About() {
   return (
     <div className="flex flex-col flex-grow w-full items-center">
@@ -32,7 +57,7 @@ export default function About() {
             Full stack web developer
           </p>
         </div>
-        <div className="w-full lg:w-10/12 flex flex-col lg:px-12 py-6 lg:py-0 text-base md:text-lg">
+        <div className="w-full lg:w-16/12 flex flex-col lg:px-12 py-6 lg:py-0 text-base md:text-lg">
           <p className="">
             Hello! I'm Shafrazi, a Full Stack Web Developer based in Sri Lanka.
           </p>
@@ -57,72 +82,96 @@ export default function About() {
           <p className="mt-3">
             Here are a few technologies I've been working with recently:
           </p>
-          <div className="flex space-x-16">
+          <div className="w-full flex space-x-6 justify-between md:justify-start">
             <ul className="mt-4">
               <li className="flex">
-                <FontAwesomeIcon
-                  icon={faCaretRight}
-                  className="mr-4"
-                  width="10"
-                />
+                <div className="flex justify-center items-center">
+                  <FontAwesomeIcon
+                    icon={faCaretRight}
+                    className="mr-3"
+                    width="16"
+                    height="16"
+                  />
+                </div>
                 <span>JavaScript</span>
               </li>
               <li className="flex">
-                <FontAwesomeIcon
-                  icon={faCaretRight}
-                  className="mr-4"
-                  width="10"
-                />
+                <div className="flex justify-center items-center">
+                  <FontAwesomeIcon
+                    icon={faCaretRight}
+                    className="mr-3"
+                    width="16"
+                    height="16"
+                  />
+                </div>
                 <span>Ruby</span>
               </li>
               <li className="flex">
-                <FontAwesomeIcon
-                  icon={faCaretRight}
-                  className="mr-4"
-                  width="10"
-                />
+                <div className="flex justify-center items-center">
+                  <FontAwesomeIcon
+                    icon={faCaretRight}
+                    className="mr-3"
+                    width="16"
+                    height="16"
+                  />
+                </div>
                 <span>Ruby on Rails</span>
               </li>
               <li className="flex">
-                <FontAwesomeIcon
-                  icon={faCaretRight}
-                  className="mr-4"
-                  width="10"
-                />
+                <div className="flex justify-center items-center">
+                  <FontAwesomeIcon
+                    icon={faCaretRight}
+                    className="mr-3"
+                    width="16"
+                    height="16"
+                  />
+                </div>
                 <span>React</span>
               </li>
             </ul>
             <ul className="mt-4">
               <li className="flex">
-                <FontAwesomeIcon
-                  icon={faCaretRight}
-                  className="mr-4"
-                  width="10"
-                />
+                <div className="flex justify-center items-center">
+                  <FontAwesomeIcon
+                    icon={faCaretRight}
+                    className="mr-3"
+                    width="16"
+                    height="16"
+                  />
+                </div>
                 <span>NextJS</span>
               </li>
               <li className="flex">
-                <FontAwesomeIcon
-                  icon={faCaretRight}
-                  className="mr-4"
-                  width="10"
-                />
+                <div className="flex justify-center items-center">
+                  <FontAwesomeIcon
+                    icon={faCaretRight}
+                    className="mr-3"
+                    width="16"
+                    height="16"
+                  />
+                </div>
                 <span>TailwindCSS</span>
               </li>
               <li className="flex">
-                <FontAwesomeIcon
-                  icon={faCaretRight}
-                  className="mr-4"
-                  width="10"
-                />
+                <div className="flex justify-center items-center">
+                  <FontAwesomeIcon
+                    icon={faCaretRight}
+                    className="mr-3"
+                    width="16"
+                    height="16"
+                  />
+                </div>
                 <span>Postgresql</span>
               </li>
               <li className="flex">
-                <FontAwesomeIcon
-                  icon={faCaretRight}
-                  className="mr-4"
-                  width="10"
-                />
+                <div className="flex justify-center items-center">
+                  <FontAwesomeIcon
+                    icon={faCaretRight}
+                    className="mr-3"
+                    width="16"
+                    height="16"
+                  />
+                </div>
                 <span>PrismaDB</span>
               </li>
             </ul>
