@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import Link from "next/link";
 
 const navigation = [
   { name: "Home", href: "/", current: false },
@@ -43,19 +44,21 @@ export default function NavBar() {
                 </Disclosure.Button>
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex-shrink-0 flex items-center">
-                  <img
-                    className="block lg:hidden h-8 w-150 rounded-lg w-auto cursor-pointer"
-                    src="/shafrazi.png"
-                    alt="logo"
-                  />
+                <Link href="/">
+                  <div className="flex-shrink-0 flex items-center">
+                    <img
+                      className="block lg:hidden h-8 w-150 rounded-lg w-auto cursor-pointer"
+                      src="/shafrazi.png"
+                      alt="logo"
+                    />
 
-                  <img
-                    className="hidden h-10 w-150 rounded-lg lg:block cursor-pointer"
-                    src="/shafrazi.png"
-                    alt="logo"
-                  />
-                </div>
+                    <img
+                      className="hidden h-10 w-150 rounded-lg lg:block cursor-pointer"
+                      src="/shafrazi.png"
+                      alt="logo"
+                    />
+                  </div>
+                </Link>
                 <div className="flex justify-end md:w-full">
                   <div className="hidden sm:block sm:ml-6 py-1">
                     <div className="flex space-x-10">
